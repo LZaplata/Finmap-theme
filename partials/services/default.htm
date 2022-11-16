@@ -3,11 +3,11 @@
 <div class="services row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-3">
     {% for post in posts %}
         <div class="service col {{ loop.index is odd ? 'odd' : 'even' }}">
-            <a href="{{ post.url }}" class="px-40 pb-40 d-block rounded-4 position-relative">
+            <a href="{{ post.url }}" class="px-40 pb-40 pt-3 d-block rounded-4 position-relative h-100">
                 <p class="img mb-0 d-flex justify-content-center">
                     {% set image = ["assets/images/services/", post.slug, ".svg"]|join|theme %}
 
-                    <span class="d-block bg-white transition" style="mask-image: url('{{ image }}');"></span>
+                    <span class="d-block bg-white transition" style="mask-image: url('{{ image }}'); -webkit-mask-image: url('{{ image }}');"></span>
                 </p>
 
                 <p class="title mb-0 pt-4 border-2 border-top border-green h2 text-white transition text-center">

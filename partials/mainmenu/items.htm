@@ -1,0 +1,25 @@
+{% for item in items %}
+    {% if not item.viewBag.isHidden %}
+        <li role="presentation" class="nav-item {{ item.viewBag.cssClass }}">
+            {% if item.url %}
+                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }} class="nav-link text-uppercase {{ item.isActive ? 'active text-yellow' : '' }} {{ item.isChildActive ? 'active text-yellow' : '' }}">
+                    {{ item.title }}
+                </a>
+            {% else %}
+                <span>{{ item.title }}</span>
+            {% endif %}
+        </li>
+    {% endif %}
+{% endfor %}
+
+<li class="me-3">
+    <a href="{{ this.theme.client_zone }}" target="_blank" class="btn btn-blue btn-sm d-inline-flex align-items-center">
+        <i class="bi bi-person-circle fs-20 me-2"></i> Klientská zóna
+    </a>
+</li>
+
+<li class="ms-n5">
+    <a href="{{ this.theme.client_add }}" target="_blank" class="btn btn-outline-green-light btn-sm d-inline-flex align-items-center">
+        <i class="bi bi-person-plus-fill fs-20 me-2"></i> Chci být klientem
+    </a>
+</li>

@@ -1,0 +1,29 @@
+[staticMenu sidemenu]
+==
+{% set code = __SELF__.parent.title|replace({" a ": " "})|slug %}
+
+<div class="container-fluid py-5" id="static-page">
+    <div class="container-lg py-xl-5">
+        <div class="row g-4 g-xxl-5">
+            <div class="col-12 col-xl">
+                <h1 class="mb-5">
+                    {% if code in submenu_pages %}
+                        <span class="text-blue-light">
+                            {{ __SELF__.parent.title }}
+                        </span><br>
+                    {% endif %}
+
+                    {{ __SELF__.title }}
+                </h1>
+
+                {% partial "submenu" code=code %}
+
+                <div class="content">
+                    {{ __SELF__.content|raw }}
+                </div>
+            </div>
+
+            {% component "sidemenu" code=code %}
+        </div>
+    </div>
+</div>

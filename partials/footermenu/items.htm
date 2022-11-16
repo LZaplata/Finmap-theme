@@ -1,0 +1,15 @@
+{% for item in items %}
+    {% if not item.viewBag.isHidden and not loop.first %}
+        <div class="col">
+            <p class="title ff-archivo fs-17 lh-25 fw-bold-760 fstr-96 text-blue position-relative pb-3 mb-3">
+                {{ item.title }}
+            </p>
+
+            {% if item.items %}
+                <ul class="nav flex-column gap-2">
+                    {% partial __SELF__ ~ "::subitems" items=item.items %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endfor %}

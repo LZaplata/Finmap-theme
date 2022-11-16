@@ -1,0 +1,64 @@
+<footer>
+    <div class="row row-cols-1 g-0 row-cols-sm-3" id="gallery">
+        <div class="col d-none d-sm-block">
+            <img src="{{ 'assets/images/gallery/01.jpg'|theme }}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col position-relative">
+            <img src="{{ 'assets/images/gallery/02.jpg'|theme }}" alt="" class="img-fluid">
+
+            <span class="d-flex position-absolute top-0 start-0 w-100 h-100 bg-red align-items-center justify-content-center p-5">
+                <img src="{{ 'assets/images/logo-white-vertical.png'|theme }}" alt="logo" class="img-fluid">
+            </span>
+        </div>
+
+        <div class="col d-none d-sm-block">
+            <img src="{{ 'assets/images/gallery/03.jpg'|theme }}" alt="" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-blue-light" id="footer">
+        <div class="container-lg py-xl-4">
+            {% component "footermenu" %}
+        </div>
+    </div>
+
+    <div class="container-fluid py-4 bg-blue text-blue-light fs-13" id="copyright">
+        <div class="container-lg">
+            <div>
+                <div class="row row-cols-1 g-4 row-cols-md-3 align-items-md-center">
+                    <div class="logo col text-center col-md-3 text-md-start">
+                        <a href="{{ 'homepage'|page }}" class="bg-white bg-green-hover transition d-inline-block"></a>
+                    </div>
+
+                    <div class="col text-center col-md-6">
+                        Základní škola a Mateřská škola Police nad Metují <br>
+                        Na Babí 190, 549 54 Police nad Metují
+                    </div>
+
+                    <div class="col text-center col-md-3 text-md-end">
+                        <a href="tel:+420 491 580 080" class="text-blue-light text-green-hover transition">
+                            +420 491 580 080 <i class="bi bi-telephone-fill fs-11 ms-1"></i>
+                        </a><br>
+
+                        <a href="mailto:zspolice@zspolice.cz" class="text-blue-light text-green-hover transition">
+                            zspolice@zspolice.cz <i class="bi bi-envelope fs-11 ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-top border-1 border-blue-light d-sm-flex align-items-sm-center justify-content-sm-between">
+                <p class="mb-0 text-center">
+                    &copy; {{ "now"|date("Y") }} ZŠ a MŠ Police nad Metují
+                </p>
+
+                <p class="signature mb-0 mt-4 d-flex justify-content-center mt-sm-0">
+                    <a href="https://www.hucr.cz" target="_blank"
+                       class="bg-blue-light bg-green-hover transition d-block"
+                       title="Tvorba webových stránek"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

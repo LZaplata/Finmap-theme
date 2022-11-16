@@ -1,0 +1,86 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+
+[blogPosts reviews]
+pageNumber = "{{ :page }}"
+categoryFilter = "rekli-o-nas"
+postsPerPage = 10
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "homepage"
+postPage = "homepage"
+
+[blogPosts services]
+pageNumber = "{{ :page }}"
+categoryFilter = "nase-sluzby"
+postsPerPage = 10
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at asc"
+categoryPage = "homepage"
+postPage = "homepage"
+==
+<div class="container-fluid px-0" id="slider">
+    {% partial "slider" %}
+</div>
+
+<div class="container-fluid py-5 bg-black-lighter">
+    <div class="container-lg text-center fs-35 text-white fst-italic py-xl-3">
+        <div class="col-xl-10 offset-xl-1 col-xxl-12 offset-xxl-0">
+            Jsme společnost, která sdružuje <span class="fw-semibold text-green">certifikované odborníky</span> s mnohaletými
+            zkušenostmi, naše práce je naším posláním a koníčkem! Našim klientům zajišťujeme komplexní servis v oblastí
+            pojištění, investic, hypoték, úvěrů a realit.
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 overflow-hidden" id="reviews">
+    <div class="container-lg py-xl-4">
+        <h2 class="h1 text-green fw-extrabold text-center mb-4 mb-xl-5">
+            Řekli o nás
+        </h2>
+
+        {% component "reviews" %}
+    </div>
+</div>
+
+<div class="container-fluid py-5" id="about-us">
+    <div class="container-lg py-xl-4">
+        <div class="row g-lg-5">
+            <div class="d-none border-2 border-end border-white d-lg-flex col-lg-4 pe-lg-5 col-xl-3">
+                <p class="mb-0 d-flex align-items-center">
+                    <img src="{{ 'assets/images/logo-text.svg'|theme }}" alt="logo" class="img-fluid">
+                </p>
+            </div>
+
+            <div class="col-12 col-lg-8 ps-lg-5 py-lg-4 col-xl-9">
+                <p class="h2 text-white fst-italic fw-semibold mb-4">
+                    Jak pracujeme a čím se zabýváme
+                </p>
+
+                <p class="fs-24">
+                    Správné nastavení osobních, rodinných a firemních financí znamená podívat se
+                    <span class="fw-bold">detailně na všechny oblasti Vašeho života</span>, stanovit si cíle
+                    a priority, až následně se zabývat <span class="fw-bold">optimální kombinací finančních produktů</span>
+                    a jejich konkrétní volbou.
+                </p>
+
+                <p class="mb-0 fs-24">
+                    Tak jako ve sportu je zkrátka potřeba nejprve vybrat správnou taktiku a až následně se pustit do
+                    boje. Samozřejmě Vám ale dokážeme pomoci i s jednoduššími věcmi jako je volba nejlepšího
+                    <span class="fw-bold">povinného ručení</span> nebo <span class="fw-bold">cestovního pojištění</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 overflow-hidden bg-black-lighter" id="services">
+    <div class="container-lg py-xl-4">
+        <h2 class="h1 text-green fw-extrabold text-center mb-4 mb-xl-5">
+            Naše služby
+        </h2>
+
+        {% component "services" %}
+    </div>
+</div>

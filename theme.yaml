@@ -1,0 +1,24 @@
+name: Finmap
+description: 'Theme for Trutnov company in a field of a financial consulting.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: finmap
+parent: ''
+database: '0'
+require:
+    - initbiz.seostorm
+    - rainlab.pages
+    - rainlab.blog
+    - lzaplata.extensions
+form:
+    fields:
+        client_zone:
+            label: Klientská zóna
+            type: text
+            span: left
+
+        client_add:
+            label: Chci být klientem
+            type: text
+            span: right

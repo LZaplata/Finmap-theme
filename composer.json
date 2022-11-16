@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/finmap-theme",
+    "type": "october-theme",
+    "description": "Theme for Trutnov company in a field of a financial consulting.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

@@ -1,0 +1,189 @@
+@import "custom"
+
+.btn
+    text-transform: uppercase
+
+    &.btn-sm
+        --bs-btn-font-weight: var(--bs-font-weight-semibold)
+        --bs-btn-border-width: 1px
+        text-transform: none
+
+    &.btn-blue
+        --bs-btn-color: var(--bs-white)
+        --bs-btn-hover-color: var(--bs-blue)
+        --bs-btn-hover-bg: var(--bs-white)
+        --bs-btn-hover-border-color: var(--bs-white)
+        --bs-btn-active-color: var(--bs-blue)
+        --bs-btn-active-bg: var(--bs-white)
+        --bs-btn-active-border-color: var(--bs-white)
+
+    &.btn-outline-green
+        --bs-btn-color: var(--bs-white)
+        --bs-btn-hover-color: var(--bs-white)
+        --bs-btn-hover-border-color: var(--bs-white)
+        --bs-btn-hover-bg: transparent
+        --bs-btn-active-color: var(--bs-white)
+        --bs-btn-active-border-color: var(--bs-white)
+        --bs-btn-active-bg: transparent
+
+    &.btn-outline-green-light
+        --bs-btn-color: var(--bs-white)
+        --bs-btn-hover-color: var(--bs-green)
+        --bs-btn-hover-bg: var(--bs-white)
+        --bs-btn-hover-border-color: var(--bs-white)
+        --bs-btn-active-color: var(--bs-green)
+        --bs-btn-active-bg: var(--bs-white)
+        --bs-btn-active-border-color: var(--bs-white)
+
+header
+    z-index: 10
+
+    .logo
+        a
+            mask-image: url("../images/logo.svg")
+            mask-size: cover
+            height: 30px
+            width: 128px
+
+#slider
+    .swiper
+        .swiper-slide
+            .container-lg
+                bottom: 85px
+
+                @include media-breakpoint-up(sm)
+                    bottom: auto
+                    left: 50%
+                    top: 50%
+                    transform: translateX(-50%) translateY(-50%)
+
+                @include media-breakpoint-down(lg)
+                    padding-left: map-get($gutters, 4)
+                    padding-right: map-get($gutters, 4)
+
+                p
+                    max-width: 530px
+
+                    @include media-breakpoint-up(lg)
+                        max-width: 620px
+
+                    @include media-breakpoint-up(xl)
+                        max-width: 655px
+
+            img
+                @include media-breakpoint-up(sm)
+                    height: 700px
+
+                @include media-breakpoint-up(md)
+                    height: 800px
+
+                @include media-breakpoint-up(xxl)
+                    height: auto
+
+        .swiper-pagination
+            margin-left: -3px
+            bottom: 30px
+
+            @include media-breakpoint-up(sm)
+                bottom: 90px
+
+            @include media-breakpoint-up(md)
+                bottom: 100px
+
+            @include media-breakpoint-down(lg)
+                padding-left: map-get($gutters, 4)
+                padding-right: map-get($gutters, 4)
+
+            .swiper-pagination-bullet
+                --swiper-pagination-bullet-width: 13px
+                --swiper-pagination-bullet-height: 13px
+                --swiper-pagination-bullet-inactive-color: var(--bs-white)
+                --swiper-pagination-bullet-inactive-opacity: 1
+                --swiper-pagination-color: var(--bs-green)
+                --swiper-pagination-bullet-horizontal-gap: 6px
+
+#offcanvas
+    .btn
+        text-transform: none !important
+
+#reviews
+    .swiper
+        overflow: visible
+
+        .swiper-pagination
+            bottom: 0
+
+            .swiper-pagination-bullet
+                --swiper-pagination-bullet-width: 13px
+                --swiper-pagination-bullet-height: 13px
+                --swiper-pagination-bullet-inactive-color: var(--bs-gray)
+                --swiper-pagination-bullet-inactive-opacity: 1
+                --swiper-pagination-color: var(--bs-green)
+                --swiper-pagination-bullet-horizontal-gap: 6px
+
+        .swiper-button-prev, .swiper-button-next
+            --swiper-navigation-color: var(--bs-green)
+
+            &:after
+                --swiper-navigation-size: var(--bs-font-size-35)
+
+            &.swiper-button-disabled
+                opacity: 1
+
+        .swiper-button-prev
+            left: 0
+            transform: translateX(-200%)
+
+        .swiper-button-next
+            right: 0
+            transform: translateX(200%)
+
+#about-us
+    background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-green) 100%)
+
+#services
+    .services
+        .service
+            a
+                z-index: 1
+
+                .img
+                    span
+                        mask-size: cover
+                        width: 207px
+                        height: 159px
+
+                &:hover
+                    .img
+                        span
+                            background-color: var(--bs-black-lighter) !important
+
+                    .border-green
+                        border-color: var(--bs-black-lighter) !important
+
+                    .title
+                        color: var(--bs-black-lighter) !important
+
+                    &:before
+                        opacity: 1
+
+                &:before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    background: linear-gradient(135deg, var(--bs-white) 0%, var(--bs-white) 100%)
+                    z-index: -1
+                    opacity: 0
+                    transition: $transition-base
+                    border-radius: $border-radius-xl
+
+            &.odd
+                a
+                    background: linear-gradient(135deg, var(--bs-green) 0%, var(--bs-blue) 100%)
+
+            &.even
+                a
+                    background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-green) 100%)

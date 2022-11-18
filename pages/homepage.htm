@@ -19,6 +19,15 @@ noPostsMessage = "Nenalezeny žádné příspěvky"
 sortOrder = "published_at asc"
 categoryPage = "homepage"
 postPage = "homepage"
+
+[blogPosts team]
+pageNumber = "{{ :page }}"
+categoryFilter = "nas-tym"
+postsPerPage = 10
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at asc"
+categoryPage = "homepage"
+postPage = "homepage"
 ==
 <div class="container-fluid px-0" id="slider">
     {% partial "slider" %}
@@ -36,7 +45,7 @@ postPage = "homepage"
 
 <div class="container-fluid py-5 overflow-hidden" id="reviews">
     <div class="container-lg py-xl-4">
-        <h2 class="h1 text-green fw-extrabold text-center mb-4 mb-xl-5">
+        <h2 class="h1 text-green fw-extrabold text-center mb-5">
             Řekli o nás
         </h2>
 
@@ -75,12 +84,32 @@ postPage = "homepage"
     </div>
 </div>
 
-<div class="container-fluid py-5 overflow-hidden bg-black-lighter" id="services">
+<div class="container-fluid py-5 bg-black-lighter" id="services">
     <div class="container-lg py-xl-4">
-        <h2 class="h1 text-green fw-extrabold text-center mb-4 mb-xl-5">
+        <h2 class="h1 text-green fw-extrabold text-center mb-5">
             Naše služby
         </h2>
 
         {% component "services" %}
+    </div>
+</div>
+
+<div class="container-fluid py-5" id="team">
+    <div class="container-lg py-xl-4">
+        <h2 class="h1 text-white fw-extrabold text-center mb-5">
+            Náš tým
+        </h2>
+
+        {% component "team" %}
+    </div>
+</div>
+
+<div class="container-fluid py-5" id="blog">
+    <div class="container-lg py-xl-4">
+        <h2 class="h1 text-green fw-extrabold text-center mb-5">
+            Blog
+        </h2>
+
+
     </div>
 </div>

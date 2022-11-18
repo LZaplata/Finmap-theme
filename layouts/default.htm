@@ -9,9 +9,7 @@ code = "main-menu"
 
 [seo]
 
-[staticPage staticpage]
-useContent = 1
-default = 1
+[contactForm contactform]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -36,14 +34,10 @@ default = 1
         {% partial "header" %}
 
         <main>
-            {% if not staticpage.content %}
-                {% page %}
-            {% else %}
-                {% component "staticpage" %}
-            {% endif %}
+            {% page %}
         </main>
 
-{#        {% partial "footer" %}|#}
+        {% partial "footer" %}
         {% partial "offcanvas" %}
 
         <script src="{{ [
@@ -56,5 +50,7 @@ default = 1
             'assets/js/swiper-bundle.js',
             'assets/js/theme.js',
         ]|theme }}"></script>
+
+        {% framework %}
     </body>
 </html>

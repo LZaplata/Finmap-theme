@@ -26,6 +26,13 @@
         --bs-btn-active-border-color: var(--bs-white)
         --bs-btn-active-bg: transparent
 
+        i
+            transition: $transition-base
+
+        &:hover
+            i
+                color: var(--bs-white) !important
+
     &.btn-outline-green-light
         --bs-btn-color: var(--bs-white)
         --bs-btn-hover-color: var(--bs-green)
@@ -198,3 +205,73 @@ header
             &.even
                 a
                     background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-green) 100%)
+
+#team
+    background: linear-gradient(90deg, var(--bs-green) 0%, var(--bs-blue) 100%)
+
+.border-before
+    &:before
+        content: ""
+        position: absolute
+        width: 50px
+        height: 2px
+        background: var(--bs-green)
+        display: block
+        top: -1px
+        left: 50%
+        transform: translateX(-50%)
+
+footer
+    #scf-contactform
+        form
+            //&.was-validated
+                .form-group
+                    &:before
+                        top: 14px
+
+            .form-group
+                position: relative
+
+                &.has-error
+                    display: flex
+                    flex-direction: column
+
+                    input
+                        order: 0
+
+                    small
+                        order: 10
+                        display: block
+                        font-size: var(--bs-font-size-16)
+
+                input, textarea
+                    padding-left: calc($input-padding-x * 2.2)
+
+                &:before
+                    font-family: bootstrap-icons
+                    position: absolute
+                    font-size: var(--bs-font-size-16)
+                    top: 23px
+                    left: calc($input-padding-x + ($grid-gutter-width / 2))
+                    line-height: 1
+                    color: $input-placeholder-color
+
+                &.name
+                    &:before
+                        content: "\F4E1"
+
+                &.email
+                    &:before
+                        content: "\F32F"
+
+                &.phone
+                    &:before
+                        content: "\F5C1"
+
+                &.text
+                    &:before
+                        content: "\F4CB"
+
+            button
+                display: flex
+                align-items: center

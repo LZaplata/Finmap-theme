@@ -89,14 +89,14 @@ $offcanvas-color:               map-get($theme-colors, "white");
 //$table-cell-padding-y:          1rem;
 //$table-border-color:            map-get($theme-colors, "blue-light");
 
-//$input-font-size:                   $font-size-base;
-//$input-border-color:                map-get($theme-colors, "white");
-//$input-border-radius:               2rem;
-//$input-padding-x:                   1.5rem;
-//$input-padding-y:                   1rem;
-//$input-focus-border-color:          map-get($theme-colors, "white");
-//$input-focus-box-shadow:            none;
-//$form-check-input-focus-box-shadow: none;
+$input-font-size:                   $font-size-base;
+$input-border-color:                map-get($theme-colors, "white");
+$input-border-radius:               1.5rem;
+$input-padding-x:                   1.5rem;
+$input-padding-y:                   1rem;
+$input-focus-border-color:          map-get($theme-colors, "white");
+$input-focus-box-shadow:            none;
+$form-check-input-focus-box-shadow: none;
 
 //$pagination-border-width:       0;
 //$pagination-hover-color:        map-get($theme-colors, "green");
@@ -221,7 +221,7 @@ $utilities:
             transition-duration: .2s,
             transition-function: ease-in-out
         ),
-    ),
+    )
 );
 
 $spacers: map-merge($spacers, (

@@ -17,9 +17,9 @@
                 {{ post.excerpt }}
             </p>
 
-            <p class="mb-0 mt-4 bg-white p-40 d-flex h-100">
-                {{ post.content|striptags }}
-            </p>
+            <div class="content mt-4 bg-white p-40 d-flex flex-column h-100">
+                {{ post.content|raw }}
+            </div>
         </div>
     {% endfor %}
 </div>

@@ -42,6 +42,22 @@
         --bs-btn-active-bg: var(--bs-white)
         --bs-btn-active-border-color: var(--bs-white)
 
+    &.btn-outline-black-lighter
+        --bs-btn-color: var(--bs-black-lighter)
+        --bs-btn-hover-color: var(--bs-black-lighter)
+        --bs-btn-hover-border-color: var(--bs-green)
+        --bs-btn-hover-bg: transparent
+        --bs-btn-active-color: var(--bs-black-lighter)
+        --bs-btn-active-border-color: var(--bs-green)
+        --bs-btn-active-bg: transparent
+
+        i
+            transition: $transition-base
+
+        &:hover
+            i
+                color: var(--bs-green) !important
+
 header
     z-index: 10
 
@@ -148,7 +164,7 @@ header
 #about-us
     background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-green) 100%)
 
-#services
+#nase-sluzby
     .services
         .service
             a
@@ -282,3 +298,17 @@ footer
             button
                 display: flex
                 align-items: center
+
+#blog
+    .posts
+        .post
+            .img
+                a
+                    &:hover
+                        img
+                            transform: scale(1.05)
+
+            .excerpt
+                p
+                    &:last-child
+                        margin-bottom: 0

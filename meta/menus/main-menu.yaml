@@ -1,18 +1,26 @@
 items:
     -
-        title: 'Naše služby'
+        title: 'O nás'
+        nesting: null
         type: url
         url: /
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'O nás'
+        title: 'Naše služby'
+        nesting: null
         type: url
-        url: /
+        url: '#nase-sluzby'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -20,7 +28,7 @@ items:
     -
         title: Blog
         type: url
-        url: /
+        url: '#blog'
         code: ''
         viewBag:
             isHidden: '0'
@@ -35,15 +43,6 @@ items:
         reference: null
         cmsPage: null
         replace: null
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: Srovnávač
-        type: url
-        url: /
-        code: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

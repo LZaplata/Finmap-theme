@@ -29,7 +29,7 @@ sortOrder = "published_at asc"
 categoryPage = "homepage"
 postPage = "homepage"
 
-[blog]
+[posts]
 ==
 <div class="container-fluid px-0" id="slider">
     {% partial "slider" %}
@@ -45,7 +45,7 @@ postPage = "homepage"
     </div>
 </div>
 
-<div class="container-fluid py-5 overflow-hidden" id="reviews">
+<div class="container-fluid py-5 overflow-hidden" id="o-nas">
     <div class="container-lg py-xl-4">
         <h2 class="h1 text-green fw-extrabold text-center mb-5">
             Řekli o nás
@@ -112,7 +112,7 @@ postPage = "homepage"
             Blog
         </h2>
 
-        {% component "blog" %}
+        {% component "posts" %}
 
         <p class="mt-5 mb-0 text-center">
             <a href="{{ 'blog'|page }}" class="btn btn-outline-black-lighter">

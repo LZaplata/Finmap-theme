@@ -2,14 +2,14 @@
 
 <div class="posts row row-cols-1 g-4">
     {% for post in posts %}
-        {% set image = post._embedded["wp:featuredmedia"]|first %}
+        {% set image = post.featured_images.first %}
 
         <div class="post col">
             <div class="row g-4">
                 <div class="col-12 col-md-4">
                     <p class="img mb-0 h-100 d-flex">
-                        <a href="" class="d-flex h-100 w-100 overflow-hidden">
-                            <img src="{{ image.source_url|resize(330, 225, {"mode": "crop"}) }}" alt="{{ image.alt_text }}" class="img-fluid w-100 of-cover transition">
+                        <a href="{{ post.url }}" class="d-flex h-100 w-100 overflow-hidden">
+                            <img src="{{ image.thumb(330, 225, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100 of-cover transition">
                         </a>
                     </p>
                 </div>
@@ -17,15 +17,15 @@
                 <div class="col-12 col-md-8">
                     <div class="bg-gray p-4 p-xl-40 h-100 position-relative">
                         <h3 class="title fst-italic mb-3">
-                            {{ post.title|first }}
+                            {{ post.title }}
                         </h3>
 
                         <div class="excerpt">
-                            {{ post.excerpt|first|raw }}
+                            {{ post.excerpt|raw }}
                         </div>
 
                         <p class="mb-0 mt-2">
-                            <a href="" class="text-blue text-green-hover stretched-link">
+                            <a href="{{ post.url }}" class="text-blue text-green-hover stretched-link">
                                 <i class="bi bi-arrow-right fs-35"></i>
                             </a>
                         </p>

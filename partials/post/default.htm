@@ -1,0 +1,11 @@
+{% set post = __SELF__.post %}
+
+<div class="post">
+    <h1 class="mb-5">
+        {{ post.title }}
+    </h1>
+
+    <div class="content">
+        {{ post.content|raw }}
+    </div>
+</div>

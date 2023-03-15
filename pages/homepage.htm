@@ -29,7 +29,14 @@ sortOrder = "published_at asc"
 categoryPage = "homepage"
 postPage = "homepage"
 
-[posts]
+[blogPosts posts]
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "homepage"
+postPage = "homepage"
+exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
 ==
 <div class="container-fluid px-0" id="slider">
     {% partial "slider" %}

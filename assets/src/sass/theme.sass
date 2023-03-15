@@ -312,3 +312,18 @@ footer
                 p
                     &:last-child
                         margin-bottom: 0
+
+.post
+    .content
+        p
+            margin-bottom: map-get($spacers, 4)
+
+            & + h2, & + h3
+                margin-top: map-get($spacers, 5)
+
+        h2, h3
+            margin-bottom: map-get($spacers, 4)
+
+        h2
+            & + h3
+                margin-top: map-get($spacers, 5)

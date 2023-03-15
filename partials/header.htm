@@ -1,4 +1,4 @@
-<header class="container-fluid p-4 px-xl-5 position-absolute">
+<header class="container-fluid p-4 px-xl-5 {{ this.page.id == 'homepage' ? 'position-absolute' : 'bg-green' }}">
     <div class="d-flex justify-content-between align-items-center">
         <div class="logo">
             <a href="{{ 'homepage'|page }}" class="d-block bg-white bg-black-light-hover transition"></a>

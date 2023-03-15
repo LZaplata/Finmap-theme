@@ -2,8 +2,14 @@ title = "Služba"
 layout = "default"
 url = "/sluzba/:slug"
 
-[blogPost service]
+[blogPost post]
 slug = "{{ :slug }}"
 categoryPage = "homepage"
 ==
-{% component "service" %}
+<div class="container-fluid py-5">
+    <div class="container-lg py-xl-4">
+        <div class="col-xl-10 offset-xl-1">
+            {% component "post" %}
+        </div>
+    </div>
+</div>

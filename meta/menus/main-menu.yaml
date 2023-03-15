@@ -1,13 +1,9 @@
 items:
     -
         title: 'O nás'
-        nesting: null
         type: url
-        url: /
+        url: '#o-nas'
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

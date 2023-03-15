@@ -1,5 +1,18 @@
 @import "custom"
 
+@mixin mask-image($image, $width: 24, $height: 24)
+    mask-image: url("../images/#{$image}.svg")
+    -webkit-mask-image: url("../images/#{$image}.svg")
+    mask-size: cover
+    -webkit-mask-size: cover
+    width: #{$width}px
+    height: #{$height}px
+    display: inline-block
+
+.mi
+    &-signature
+        @include mask-image("signature", 85, 25)
+
 .btn
     text-transform: uppercase
 
@@ -364,3 +377,16 @@ footer
                     content: counter(li)"."
                     color: $green
                     left: -1.5rem
+
+#copyright
+    background: linear-gradient(90deg, var(--bs-blue) 0%, var(--bs-green) 100%)
+
+    .nav
+        li
+            a
+                &.active
+                    color: var(--bs-black-lighter) !important
+
+            &:not(:first-child)
+                a
+                    border-left: 1px solid var(--bs-white)

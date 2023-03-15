@@ -1,0 +1,20 @@
+items:
+    -
+        title: GDPR
+        type: cms-page
+        code: ''
+        reference: gdpr
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Nastavení cookies'
+        type: cms-page
+        code: ''
+        reference: cookies
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Footer menu'

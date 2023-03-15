@@ -1,9 +1,13 @@
 items:
     -
         title: 'O nás'
+        nesting: null
         type: url
         url: '#o-nas'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -23,22 +27,22 @@ items:
             isExternal: '0'
     -
         title: Blog
+        nesting: null
         type: url
         url: '#blog'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Kontakt
-        nesting: null
         type: url
-        url: /
+        url: '#kontakt'
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''

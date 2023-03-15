@@ -1,0 +1,22 @@
+title = "Blog"
+layout = "default"
+url = "/blog"
+
+[blogPosts posts]
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog-clanek"
+exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
+==
+<div class="container-fluid py-5" id="blog">
+    <div class="container-lg py-xl-4">
+        <h1 class="mb-5">
+            {{ this.page.title }}
+        </h1>
+
+        {% component "posts" %}
+    </div>
+</div>

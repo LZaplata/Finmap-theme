@@ -1,0 +1,15 @@
+title = "Blog - článek"
+layout = "default"
+url = "/blog/clanek/:slug"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "blog"
+==
+<div class="container-fluid py-5">
+    <div class="container-lg py-xl-4">
+        <div class="col-xl-10 offset-xl-1">
+            {% component "post" %}
+        </div>
+    </div>
+</div>

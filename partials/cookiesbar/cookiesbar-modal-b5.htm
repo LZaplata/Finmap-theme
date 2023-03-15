@@ -1,0 +1,46 @@
+<div class="modal fade" id="sg-settings-modal-{{ __SELF__ }}" tabindex="-1" role="dialog" aria-labelledby="sg-settings-modal-{{ __SELF__ }}">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <p class="h3 modal-title mb-3">{{cookiesSettingsGet('cookies_manage_title')}}</p>
+
+            </div>
+
+            <div class="modal-body">
+
+                {% if cookiesSettingsGet('cookies_manage_content', null) %}
+
+                    <div class="content text-tertiary-55">
+                        {{ cookiesSettingsGet('cookies_manage_content')|raw }}
+                    </div>
+
+                {% endif %}
+
+                {% partial '@list-cookies'
+                    disablePageReload = cookiesSettingsGet('cookies_bar_disable_page_reload', 0)
+                    disableSaveButton = true
+                    customId = '-modal' %}
+
+            </div>
+
+            <div class="mt-2 d-grid gap-3 d-sm-flex justify-content-sm-start">
+
+                <button type="button"
+                        id="cookies-manage-save-modal"
+                        class="btn btn-outline-black-lighter btn-sm">{{ 'janvince.smallgdpr::lang.settings.form_fields.save_settings'|trans }}</button>
+
+                <button type="button"
+                        data-bs-dismiss="modal"
+                        class="btn btn-outline-black-lighter btn-sm">{{ 'janvince.smallgdpr::lang.settings.form_fields.cancel'|trans }}</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

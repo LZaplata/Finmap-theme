@@ -10,6 +10,8 @@ code = "footer-menu"
 [seo]
 
 [contactForm contactform]
+
+[cookiesBar cookiesbar]
 ==
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -28,6 +30,8 @@ code = "footer-menu"
             'assets/css/lg-thumbnail.css',
             'assets/css/swiper-bundle.css',
         ]|theme }}" />
+
+        {% styles %}
     </head>
 
     <body>
@@ -40,6 +44,8 @@ code = "footer-menu"
         {% partial "footer" %}
         {% partial "offcanvas" %}
 
+        {% component "cookiesbar" %}
+
         <script src="{{ [
             'assets/js/jquery.min.js',
             'assets/js/popper.js',
@@ -51,6 +57,7 @@ code = "footer-menu"
             'assets/js/theme.js',
         ]|theme }}"></script>
 
+        {% scripts %}
         {% framework %}
     </body>
 </html>

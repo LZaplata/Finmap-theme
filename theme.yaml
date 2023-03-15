@@ -12,6 +12,7 @@ require:
     - rainlab.blog
     - lzaplata.extensions
     - janvince.smallcontactform
+    - janvince.smallgdpr
 form:
     fields:
         client_zone:

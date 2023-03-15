@@ -327,3 +327,40 @@ footer
         h2
             & + h3
                 margin-top: map-get($spacers, 5)
+
+        ul, ol
+            padding-left: 1rem
+            list-style: none
+            margin-bottom: map-get($spacers, 4)
+
+            li
+                position: relative
+
+                &:not(:first-child)
+                    margin-top: 5px
+
+                &:before
+                    position: absolute
+                    left: -1rem
+
+        ul
+            li
+                &:before
+                    content: ""
+                    width: 6px
+                    height: 6px
+                    border-radius: 10px
+                    background-color: $green
+                    top: 11px
+
+        ol
+            counter-reset: li
+            padding-left: 1.5rem
+
+            li
+                counter-increment: li
+
+                &:before
+                    content: counter(li)"."
+                    color: $green
+                    left: -1.5rem

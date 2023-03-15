@@ -1,9 +1,13 @@
 items:
     -
         title: GDPR
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: gdpr
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -12,7 +16,7 @@ items:
         title: 'Nastavení cookies'
         type: cms-page
         code: ''
-        reference: cookies
+        reference: nastaveni-cookies
         viewBag:
             isHidden: '0'
             cssClass: ''

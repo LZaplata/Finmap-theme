@@ -138,6 +138,36 @@ header
                 --swiper-pagination-color: var(--bs-green)
                 --swiper-pagination-bullet-horizontal-gap: 6px
 
+        .swiper-button-prev, .swiper-button-next
+            color: $white
+
+        .swiper-button-prev
+            left: 15px
+
+        .swiper-button-next
+            right: 15px
+
+        @include media-breakpoint-down(xl)
+            .swiper-button-prev, .swiper-button-next
+                top: auto
+                margin-top: 0
+                bottom: 33px
+
+        @include media-breakpoint-down(lg)
+            --swiper-navigation-size: 20px
+
+        @include media-breakpoint-only(sm)
+            .swiper-button-prev, .swiper-button-next
+                bottom: 93px
+
+        @include media-breakpoint-only(md)
+            .swiper-button-prev, .swiper-button-next
+                bottom: 103px
+
+        @include media-breakpoint-only(lg)
+            .swiper-button-prev, .swiper-button-next
+                bottom: 91px
+
 #offcanvas
     .btn
         text-transform: none !important

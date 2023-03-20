@@ -12,6 +12,13 @@ var sliderSwiper = new Swiper(".slider-swiper", {
     pagination: {
         el: ".swiper-pagination",
     },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 7000,
+    },
 });
 
 var reviewsSwiper = new Swiper(".reviews-swiper", {

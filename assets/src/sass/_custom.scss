@@ -42,8 +42,8 @@ $line-heights: (
 );
 
 $link-decoration:               none;
-//$link-color:                    map-get($theme-colors, "black");
-//$link-hover-color:              map-get($theme-colors, "black");
+$link-color:                    map-get($theme-colors, "green");
+$link-hover-color:              map-get($theme-colors, "blue");
 
 $font-family-barlow:            "Barlow", sans-serif;
 $font-family-base:              $font-family-barlow;

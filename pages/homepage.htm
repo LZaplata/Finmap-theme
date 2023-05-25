@@ -20,15 +20,6 @@ sortOrder = "published_at asc"
 categoryPage = "homepage"
 postPage = "sluzba"
 
-[blogPosts team]
-pageNumber = "{{ :page }}"
-categoryFilter = "nas-tym"
-postsPerPage = 10
-noPostsMessage = "Nenalezeny žádné příspěvky"
-sortOrder = "published_at asc"
-categoryPage = "homepage"
-postPage = "homepage"
-
 [blogPosts posts]
 pageNumber = "{{ :page }}"
 postsPerPage = 4
@@ -37,6 +28,10 @@ sortOrder = "published_at desc"
 categoryPage = "homepage"
 postPage = "blog-clanek"
 exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
+
+[collection team]
+handle = "Team\Member"
+recordsPerPage = 6
 ==
 <div class="container-fluid px-0" id="slider">
     {% partial "slider" %}
@@ -65,13 +60,7 @@ exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
 <div class="container-fluid py-5" id="about-us">
     <div class="container-lg py-xl-4">
         <div class="row g-lg-5">
-            <div class="d-none border-2 border-end border-white d-lg-flex col-lg-4 pe-lg-5 col-xl-3">
-                <p class="mb-0 d-flex align-items-center">
-                    <img src="{{ 'assets/images/logo-text.svg'|theme }}" alt="logo" class="img-fluid">
-                </p>
-            </div>
-
-            <div class="col-12 col-lg-8 ps-lg-5 py-lg-4 col-xl-9">
+            <div class="col-12 col-lg-8 pe-lg-5 py-lg-4 col-xl-9">
                 <p class="h2 text-white fst-italic fw-semibold mb-4">
                     Jak pracujeme a čím se zabýváme
                 </p>
@@ -95,6 +84,14 @@ exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
                     </a>
                 </p>
             </div>
+
+            <div class="d-none d-lg-flex col-lg-4 ps-lg-5 col-xl-3">
+                <p class="mb-0 d-flex align-items-center">
+                    <span class="img d-flex align-items-center justify-content-center bg-white p-5 rounded-circle">
+                        <img src="{{ 'assets/images/logo-text.svg'|theme }}" alt="logo" class="img-fluid">
+                    </span>
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -115,7 +112,15 @@ exceptCategories = "nas-tym,nase-sluzby,rekli-o-nas"
             Náš tým
         </h2>
 
-        {% component "team" %}
+        {% partial "team/default" posts=team %}
+
+        <p class="mt-5 mb-0 text-center">
+            <a href="{{ 'nas-tym'|page }}" class="btn btn-outline-white">
+                celý tým
+
+                <i class="bi bi-chevron-right ms-2 fss-16 text-green"></i>
+            </a>
+        </p>
     </div>
 </div>
 

@@ -1,0 +1,17 @@
+url = "/nas-tym"
+layout = "default"
+title = "Náš tým"
+
+[collection team]
+handle = "Team\Member"
+recordsPerPage = 6
+==
+<div class="container-fluid py-5 page" id="team">
+    <div class="container-lg py-xl-4">
+        <h1 class="mb-5 text-center">
+            {{ this.page.title }}
+        </h1>
+
+        {% partial "team/default" posts=team %}
+    </div>
+</div>

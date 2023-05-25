@@ -1,126 +1,128 @@
 <footer>
-    <div class="container-fluid py-5 bg-black-lighter" id="kontakt">
-        <div class="container-lg py-xl-4">
-            <h2 class="h1 text-green fw-extrabold text-center mb-5">
-                Spojte se s námi
-            </h2>
+    {% if this.page.id != "clen-tymu" %}
+        <div class="container-fluid py-5 bg-black-lighter" id="kontakt">
+            <div class="container-lg py-xl-4">
+                <h2 class="h1 text-green fw-extrabold text-center mb-5">
+                    Spojte se s námi
+                </h2>
 
-            <div class="row row-cols-1 g-4 gy-5 g-lg-5 row-cols-md-2 mb-5">
-                <div class="col pe-xxl-5">
-                    <div class="border-2 border border-green p-4">
-                        <div class="row g-4">
-                            <div class="col-12 text-center col-sm-auto text-sm-start col-md-12 text-md-center col-xl-auto text-xl-start">
-                                <img src="{{ 'assets/images/tomas-kisy.png'|theme }}" alt="Tomáš Kisý">
-                            </div>
+                <div class="row row-cols-1 g-4 gy-5 g-lg-5 row-cols-md-2 mb-5">
+                    <div class="col ps-xxl-5">
+                        <p class="h2 fw-semibold text-green mb-3 text-center">
+                            FinMap CZ s.r.o.
+                        </p>
 
-                            <div class="col-12 mt-4 col-sm col-md-12 col-xl">
-                                <p class="h3 text-white text-uppercase fw-semibold text-center mb-2 text-sm-start text-md-center text-lg-start">
-                                    jednatel
-                                </p>
+                        <p class="d-flex align-items-center justify-content-center mb-1">
+                            <i class="bi bi-telephone text-green fs-20 me-2"></i>
 
-                                <p class="h2 text-green text-center fw-semibold mb-3 text-sm-start text-md-center text-lg-start">
-                                    Bc. Tomáš Kisý, DiS.
-                                </p>
+                            <span>
+                                <a href="tel:+420 777 663 294" class="text-white text-green-hover transition fw-semibold fs-20">
+                                    +420 777 663 294
+                                </a>
+                            </span>
+                        </p>
 
-                                <p class="d-flex align-items-center justify-content-center mb-1 justify-content-sm-start justify-content-md-center justify-content-xl-start">
-                                    <i class="bi bi-telephone text-green fs-20 me-2"></i>
+                        <p class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="bi bi-envelope text-green fs-20 me-2"></i>
 
-                                    <span>
-                                        <a href="tel:+420 777 663 294" class="text-gray text-green-hover transition">
-                                            +420 777 663 294
-                                        </a>
-                                    </span>
-                                </p>
+                            <span>
+                                <a href="mailto:info@finmap.cz" class="text-white text-green-hover transition fw-semibold fs-20">
+                                    info@finmap.cz
+                                </a>
+                            </span>
+                        </p>
 
-                                <p class="d-flex align-items-center justify-content-center mb-2 justify-content-sm-start justify-content-md-center justify-content-lg-start">
-                                    <i class="bi bi-envelope text-green fs-20 me-2"></i>
+                        <p class="border-before mt-4 pt-4 text-gray position-relative text-center mb-0">
+                            IČO: 06794955
+                        </p>
 
-                                    <span>
-                                        <a href="mailto:tomas.kisy@finmap.cz" class="text-gray text-green-hover transition">
-                                            tomas.kisy@finmap.cz
-                                        </a>
-                                    </span>
-                                </p>
+                        <p class="mb-0 text-gray text-center mt-2 mt-sm-0 mt-md-2 mt-xl-0">
+                            Sídlo: <br class="d-sm-none d-md-inline-block d-xl-none">
+                            Nádražní 189, <br class="d-sm-none d-md-inline-block d-xl-none">
+                            Střední Předměstí, <br class="d-sm-none d-md-inline-block d-xl-none">
+                            541 01 Trutnov
+                        </p>
 
-                                <p class="d-flex align-items-center justify-content-center mb-0 text-gray justify-content-sm-start justify-content-md-center justify-content-xl-start">
-                                    <i class="bi bi-envelope text-green fs-20 me-2 d-none d-sm-inline-block invisible d-md-none"></i>
-
-                                    <span>
-                                        IČO: 87238501
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
+                        <p class="mb-0 text-gray text-center mt-2 mt-sm-0 mt-md-2 mt-xl-0">
+                            Spisová značka: <br class="d-sm-none d-md-inline-block d-xl-none">
+                            C 41056/KSHK Krajský soud <br class="d-sm-none d-md-inline-block d-xl-none">
+                            v Hradci Králové
+                        </p>
                     </div>
+
+{#                    <div class="col pe-xxl-5">#}
+{#                        <div class="border-2 border border-green p-4">#}
+{#                            <div class="row g-4">#}
+{#                                <div class="col-12 text-center col-sm-auto text-sm-start col-md-12 text-md-center col-xl-auto text-xl-start">#}
+{#                                    <img src="{{ 'assets/images/tomas-kisy.png'|theme }}" alt="Tomáš Kisý">#}
+{#                                </div>#}
+
+{#                                <div class="col-12 mt-4 col-sm col-md-12 col-xl">#}
+{#                                    <p class="h3 text-white text-uppercase fw-semibold text-center mb-2 text-sm-start text-md-center text-lg-start">#}
+{#                                        jednatel#}
+{#                                    </p>#}
+
+{#                                    <p class="h2 text-green text-center fw-semibold mb-3 text-sm-start text-md-center text-lg-start">#}
+{#                                        Bc. Tomáš Kisý, DiS.#}
+{#                                    </p>#}
+
+{#                                    <p class="d-flex align-items-center justify-content-center mb-1 justify-content-sm-start justify-content-md-center justify-content-xl-start">#}
+{#                                        <i class="bi bi-telephone text-green fs-20 me-2"></i>#}
+
+{#                                        <span>#}
+{#                                            <a href="tel:+420 777 663 294" class="text-gray text-green-hover transition">#}
+{#                                                +420 777 663 294#}
+{#                                            </a>#}
+{#                                        </span>#}
+{#                                    </p>#}
+
+{#                                    <p class="d-flex align-items-center justify-content-center mb-2 justify-content-sm-start justify-content-md-center justify-content-lg-start">#}
+{#                                        <i class="bi bi-envelope text-green fs-20 me-2"></i>#}
+
+{#                                        <span>#}
+{#                                            <a href="mailto:tomas.kisy@finmap.cz" class="text-gray text-green-hover transition">#}
+{#                                                tomas.kisy@finmap.cz#}
+{#                                            </a>#}
+{#                                        </span>#}
+{#                                    </p>#}
+
+{#                                    <p class="d-flex align-items-center justify-content-center mb-0 text-gray justify-content-sm-start justify-content-md-center justify-content-xl-start">#}
+{#                                        <i class="bi bi-envelope text-green fs-20 me-2 d-none d-sm-inline-block invisible d-md-none"></i>#}
+
+{#                                        <span>#}
+{#                                            IČO: 87238501#}
+{#                                        </span>#}
+{#                                    </p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
                 </div>
 
-                <div class="col ps-xxl-5">
-                    <p class="h2 fw-semibold text-green mb-3 text-center">
-                        FinMap CZ s.r.o.
-                    </p>
+                <div class="row row-cols-1 g-4 gy-5 g-lg-5 row-cols-lg-2 pt-xl-5">
+                    <div class="col pe-xxl-5">
+                        <p class="h2 fst-italic text-green text-center mb-4">
+                            Chcete být naším klientem?
+                        </p>
 
-                    <p class="d-flex align-items-center justify-content-center mb-1">
-                        <i class="bi bi-telephone text-green fs-20 me-2"></i>
+                        {% component "contactform" %}
+                    </div>
 
-                        <span>
-                            <a href="tel:+420 777 663 294" class="text-white text-green-hover transition fw-semibold fs-20">
-                                +420 777 663 294
-                            </a>
-                        </span>
-                    </p>
+                    <div class="col ps-xxl-5">
+                        <p class="h2 fst-italic text-green text-center mb-4">
+                            Kde nás najdete
+                        </p>
 
-                    <p class="d-flex align-items-center justify-content-center mb-2">
-                        <i class="bi bi-envelope text-green fs-20 me-2"></i>
-
-                        <span>
-                            <a href="mailto:info@finmap.cz" class="text-white text-green-hover transition fw-semibold fs-20">
-                                info@finmap.cz
-                            </a>
-                        </span>
-                    </p>
-
-                    <p class="border-before mt-4 pt-4 text-gray position-relative text-center mb-0">
-                        IČO: 06794955
-                    </p>
-
-                    <p class="mb-0 text-gray text-center mt-2 mt-sm-0 mt-md-2 mt-xl-0">
-                        Sídlo: <br class="d-sm-none d-md-inline-block d-xl-none">
-                        Nádražní 189, <br class="d-sm-none d-md-inline-block d-xl-none">
-                        Střední Předměstí, <br class="d-sm-none d-md-inline-block d-xl-none">
-                        541 01 Trutnov
-                    </p>
-
-                    <p class="mb-0 text-gray text-center mt-2 mt-sm-0 mt-md-2 mt-xl-0">
-                        Spisová značka: <br class="d-sm-none d-md-inline-block d-xl-none">
-                        C 41056/KSHK Krajský soud <br class="d-sm-none d-md-inline-block d-xl-none">
-                        v Hradci Králové
-                    </p>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 g-4 gy-5 g-lg-5 row-cols-lg-2 pt-xl-5">
-                <div class="col pe-xxl-5">
-                    <p class="h2 fst-italic text-green text-center mb-4">
-                        Chcete být naším klientem?
-                    </p>
-
-                    {% component "contactform" %}
-                </div>
-
-                <div class="col ps-xxl-5">
-                    <p class="h2 fst-italic text-green text-center mb-4">
-                        Kde nás najdete
-                    </p>
-
-                    <div>
-                        <div class="ratio ratio-16x9">
-                            <iframe style="border:none" src="https://en.frame.mapy.cz/s/gesolumero" width="400" height="280" frameborder="0"></iframe>
+                        <div>
+                            <div class="ratio ratio-16x9">
+                                <iframe style="border:none" src="https://en.frame.mapy.cz/s/gesolumero" width="400" height="280" frameborder="0"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 
     <div class="container-fluid py-4" id="copyright">
         <div class="container-lg">

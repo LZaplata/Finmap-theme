@@ -1,0 +1,120 @@
+url = "/nas-tym/clen/:slug"
+layout = "default"
+title = "Člen týmu"
+
+[section member]
+handle = "Team\Member"
+entrySlug = "{{ :slug }}"
+
+[collection comments]
+handle = "Team\Comment"
+==
+<div id="team-member">
+    <div class="container-fluid bg-gray">
+        <div class="container-lg">
+            <div class="position-relative">
+                <div class="py-4 py-md-5">
+                    <h1 class="h2 text-green fw-extrabold py-4 mb-0">
+                        {{ member.title }}
+                    </h1>
+                </div>
+
+                <div class="img position-absolute top-50 end-0 translate-middle-y">
+                    <img src="{{ member.image.thumb(195, 195, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container-lg py-xl-4">
+            <div class="row row-cols-1 row-cols-xl-2 g-xl-5">
+                <div class="col col-xl-8 col-xxl-9">
+                    <div class="content">
+                        {{ member.content|raw }}
+                    </div>
+                </div>
+
+                <div class="col mt-4 col-xl-4 col-xxl-3 mt-xl-5">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-1 mt-xxl-4">
+                        <div class="col">
+                            <h3 class="text-green text-uppercase fw-semibold mb-3">
+                                Zaměření
+                            </h3>
+
+                            <div class="border border-2 border-green p-4">
+                                <ul class="d-flex flex-column gap-2 list-unstyled mb-0">
+                                    {% for service in member.services %}
+                                        <li>
+                                            {{ service }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col mt-4 mt-sm-0 mt-xl-4">
+                            <h3 class="text-green text-uppercase fw-semibold mb-3">
+                                Kontakt
+                            </h3>
+
+                            <div class="border border-2 border-green p-4">
+                                <div class="d-flex flex-column gap-2">
+                                    {% if member.phone %}
+                                        <p class="mb-0 d-flex align-items-center">
+                                            <i class="bi bi-telephone text-blue me-3"></i>
+
+                                            <a href="tel: {{ member.phone }}" class="text-black text-green-hover transition">
+                                                {{ member.phone }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+
+                                    {% if member.email %}
+                                        <p class="mb-0 d-flex align-items-center">
+                                            <i class="bi bi-envelope text-blue me-3"></i>
+
+                                            <a href="mailto: {{ member.email }}" class="text-black text-green-hover transition">
+                                                {{ member.email }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-black-lighter">
+        <div class="container-lg py-xl-4">
+            <h2 class="text-white fst-italic mb-4">
+                Hodnocení
+            </h2>
+
+            <div class="row row-cols-1 row-cols-xl-2">
+                <div class="col col-xl-8 col-xxl-9">
+                    <div class="comments d-flex flex-column gap-5">
+                        {% set comments = comments.whereRelation("member", "member_id", member.id).get() %}
+
+                        {% for comment in comments %}
+                            <div class="comment">
+                                <div class="border border-2 border-green p-4 text-white p-4">
+                                    <div class="content p-lg-3">
+                                        {{ comment.content|raw }}
+                                    </div>
+                                </div>
+
+                                <h3 class="mb-0 text-green h4 mt-3 fw-medium fst-italic">
+                                    {{ comment.title }}
+                                </h3>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

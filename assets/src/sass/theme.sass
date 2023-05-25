@@ -71,6 +71,15 @@
             i
                 color: var(--bs-green) !important
 
+    &.btn-outline-white
+        i
+            transition: $transition-base
+            color: var(--bs-white) !important
+
+        &:hover
+            i
+                color: var(--bs-black) !important
+
 header
     z-index: 10
 
@@ -207,6 +216,10 @@ header
 #about-us
     background: linear-gradient(135deg, var(--bs-blue) 0%, var(--bs-green) 100%)
 
+    .img
+        width: 250px
+        height: 250px
+
 #nase-sluzby
     .services
         .service
@@ -270,10 +283,52 @@ header
 
     .team
         .col
-            .content
-                p
-                    &:last-child
-                        margin-bottom: 0
+            .img
+                a
+                    img
+                        transition: $transition-base
+
+                    &:hover
+                        img
+                            transform: scale(1.05)
+
+            a
+                color: $black
+                transition: $transition-base
+
+                &:hover
+                    color: $white
+
+    &.page
+        background: var(--bs-white)
+
+        .team
+            .col
+                a
+                    &:hover
+                        color: var(--bs-blue)
+
+    &-member
+        .img
+            @include media-breakpoint-up(xl)
+                top: 40px !important
+                transform: translateY(0) !important
+
+            img
+                max-height: 100px
+
+                @include media-breakpoint-up(md)
+                    max-height: 130px
+
+                @include media-breakpoint-up(md)
+                    max-height: none
+
+        .comments
+            .comment
+                .content
+                    p
+                        &:last-child
+                            margin-bottom: 0
 
 .border-before
     &:before

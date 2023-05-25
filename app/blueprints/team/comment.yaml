@@ -1,0 +1,26 @@
+uuid: lzaplata_team_comments
+handle: Team\Comment
+type: stream
+name: Hodnocení
+drafts: false
+showImport: false
+showExport: false
+
+navigation:
+    label: Hodnocení
+    icon: icon-comment-o
+    parent: Team\Member
+    order: 20
+
+fields:
+    content:
+        label: Obsah
+        type: richeditor
+        column: false
+        scope: false
+
+    member:
+        label: Člen
+        type: entries
+        source: Team\Member
+        maxItems: 1

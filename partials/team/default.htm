@@ -1,25 +1,17 @@
-{% set posts = __SELF__.posts %}
-
 <div class="team row row-cols-1 gx-4 gy-5 row-cols-sm-2 row-cols-lg-3">
     {% for post in posts %}
-        {% set image = post.featured_images.first %}
-
         <div class="col d-flex flex-column">
             <p class="img d-flex justify-content-center mb-0">
-                <img src="{{ image.thumb(195, 195, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid">
+                <a href="{{ 'clen-tymu'|page({slug: post.slug}) }}">
+                    <img src="{{ post.image.thumb(195, 195, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid">
+                </a>
             </p>
 
             <p class="name mb-0 mt-4 h2 fst-italic text-center fw-semibold">
-                {{ post.title }}
+                <a href="{{ 'clen-tymu'|page({slug: post.slug}) }}">
+                    {{ post.title }}
+                </a>
             </p>
-
-            <p class="job mb-0 h3 text-center fw-semibold">
-                {{ post.excerpt }}
-            </p>
-
-            <div class="content mt-4 bg-white p-40 d-flex flex-column h-100">
-                {{ post.content|raw }}
-            </div>
         </div>
     {% endfor %}
 </div>

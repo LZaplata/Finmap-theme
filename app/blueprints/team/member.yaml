@@ -1,0 +1,57 @@
+uuid: lzaplata_team_members
+handle: Team\Member
+type: structure
+name: Člen
+drafts: false
+showImport: false
+showExport: false
+
+structure:
+    maxDepth: 1
+
+primaryNavigation:
+    label: Náš tým
+    icon: icon-users
+    order: 10
+
+navigation:
+    label: Členové
+    icon: icon-list-ul
+    parent: Team\Member
+    order: 10
+
+fields:
+    image:
+        label: Fotka
+        type: fileupload
+        fileType: png,jpg,jpeg,webp
+        maxFiles: 1
+        span: left
+        column: false
+        scope: false
+    
+    content:
+        label: Obsah
+        type: richeditor
+        column: false
+        scope: false
+    
+    services:
+        label: Zaměření
+        type: checkboxlist
+        options:
+            Finanční plánování: Finanční plánování
+            Investice: Investice
+        span: left
+        column: false
+        scope: false
+
+    email:
+        label: E-mail
+        span: left
+        type: text
+
+    phone:
+        label: Telefon
+        span: right
+        type: text

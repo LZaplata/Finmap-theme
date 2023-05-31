@@ -8,6 +8,8 @@ entrySlug = "{{ :slug }}"
 
 [collection comments]
 handle = "Team\Comment"
+
+[comment]
 ==
 <div id="team-member">
     <div class="container-fluid bg-gray">
@@ -93,6 +95,18 @@ handle = "Team\Comment"
             <h2 class="text-white fst-italic mb-4">
                 Hodnocení
             </h2>
+
+            <div class="mb-5">
+                <a href="#add-comment" class="d-inline-flex align-items-center text-blue text-white-hover transition" data-bs-toggle="collapse">
+                    <i class="bi bi-chat-left-quote me-2"></i> Přidat hodnocení
+                </a>
+
+                <div id="add-comment" class="collapse col-md-8 col-lg-6 col-xxl-5">
+                    <div id="add-comment-form">
+                        {% partial "commentform/default" %}
+                    </div>
+                </div>
+            </div>
 
             <div class="row row-cols-1 row-cols-xl-2">
                 <div class="col col-xl-8 col-xxl-9">

@@ -1,0 +1,21 @@
+{% set posts = __SELF__.posts %}
+
+<div class="posts">
+    {% for post in posts %}
+        {% set image = post._embedded["wp:featuredmedia"]|first %}
+
+        <div class="post">
+            <p class="img">
+                <img src="{{ image.source_url }}" alt="{{ image.alt_text }}">
+            </p>
+
+            <h3 class="title">
+                {{ post.title|first }}
+            </h3>
+
+            <p class="excerpt">
+                {{ post.excerpt|first|raw }}
+            </p>
+        </div>
+    {% endfor %}
+</div>

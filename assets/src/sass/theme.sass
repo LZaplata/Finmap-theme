@@ -342,60 +342,59 @@ header
         left: 50%
         transform: translateX(-50%)
 
-footer
-    #scf-contactform
-        form
-            //&.was-validated
-                .form-group
-                    &:before
-                        top: 14px
-
+#scf-contactform, #add-comment
+    form
+        //&.was-validated
             .form-group
-                position: relative
-
-                &.has-error
-                    display: flex
-                    flex-direction: column
-
-                    input
-                        order: 0
-
-                    small
-                        order: 10
-                        display: block
-                        font-size: var(--bs-font-size-16)
-
-                input, textarea
-                    padding-left: calc($input-padding-x * 2.2)
-
                 &:before
-                    font-family: bootstrap-icons
-                    position: absolute
-                    font-size: var(--bs-font-size-16)
-                    top: 23px
-                    left: calc($input-padding-x + ($grid-gutter-width / 2))
-                    line-height: 1
-                    color: $input-placeholder-color
+                    top: 14px
 
-                &.name
-                    &:before
-                        content: "\F4E1"
+        .form-group
+            position: relative
 
-                &.email
-                    &:before
-                        content: "\F32F"
-
-                &.phone
-                    &:before
-                        content: "\F5C1"
-
-                &.text
-                    &:before
-                        content: "\F4CB"
-
-            button
+            &.has-error
                 display: flex
-                align-items: center
+                flex-direction: column
+
+                input
+                    order: 0
+
+                small
+                    order: 10
+                    display: block
+                    font-size: var(--bs-font-size-16)
+
+            input, textarea
+                padding-left: calc($input-padding-x * 2.2)
+
+            &:before
+                font-family: bootstrap-icons
+                position: absolute
+                font-size: var(--bs-font-size-16)
+                top: 23px
+                left: calc($input-padding-x + ($grid-gutter-width / 2))
+                line-height: 1
+                color: $input-placeholder-color
+
+            &.name
+                &:before
+                    content: "\F4E1"
+
+            &.email
+                &:before
+                    content: "\F32F"
+
+            &.phone
+                &:before
+                    content: "\F5C1"
+
+            &.text
+                &:before
+                    content: "\F4CB"
+
+        button
+            display: flex
+            align-items: center
 
 #blog
     .posts

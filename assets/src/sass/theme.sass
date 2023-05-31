@@ -182,19 +182,20 @@ header
         text-transform: none !important
 
 #o-nas
-    .swiper
-        overflow: visible
+    .reviews-swiper-container
+        position: relative
 
-        .swiper-pagination
-            bottom: 0
+        .swiper
+            .swiper-pagination
+                bottom: 0
 
-            .swiper-pagination-bullet
-                --swiper-pagination-bullet-width: 13px
-                --swiper-pagination-bullet-height: 13px
-                --swiper-pagination-bullet-inactive-color: var(--bs-gray)
-                --swiper-pagination-bullet-inactive-opacity: 1
-                --swiper-pagination-color: var(--bs-green)
-                --swiper-pagination-bullet-horizontal-gap: 6px
+                .swiper-pagination-bullet
+                    --swiper-pagination-bullet-width: 13px
+                    --swiper-pagination-bullet-height: 13px
+                    --swiper-pagination-bullet-inactive-color: var(--bs-gray)
+                    --swiper-pagination-bullet-inactive-opacity: 1
+                    --swiper-pagination-color: var(--bs-green)
+                    --swiper-pagination-bullet-horizontal-gap: 6px
 
         .swiper-button-prev, .swiper-button-next
             --swiper-navigation-color: var(--bs-green)

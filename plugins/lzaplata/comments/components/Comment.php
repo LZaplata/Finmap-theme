@@ -52,7 +52,7 @@ class Comment extends ComponentBase
         $comment->is_enabled = 0;
         $comment->save();
 
-        Mail::sendTo("lukas.zaplata@gmail.com", "lzaplata.comments::mail.add-comment", Input::all());
+        Mail::sendTo("info@finmap.cz", "lzaplata.comments::mail.add-comment", Input::all());
 
         Flash::success("Hodnocení bylo úspěšně odeslano ke schválení.");
 

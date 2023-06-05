@@ -51,9 +51,9 @@ var reviewsSwiper = new Swiper(".reviews-swiper", {
 // });
 
 $(document).ready(function () {
-    // $("#offcanvas .nav li a").click(function (event) {
-    //     $("#offcanvas").removeClass("show");
-    //     $(".offcanvas-backdrop").remove();
-    //     $("body").removeAttr("style");
-    // });
+    $("#offcanvas .nav li a").click(function (event) {
+        $("#offcanvas").removeClass("show");
+        $(".offcanvas-backdrop").remove();
+        $("body").removeAttr("style");
+    });
 });

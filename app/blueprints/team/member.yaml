@@ -29,22 +29,22 @@ fields:
         span: left
         column: false
         scope: false
-    
+
     content:
         label: Obsah
         type: richeditor
         column: false
         scope: false
-    
-    services:
-        label: Zaměření
-        type: checkboxlist
-        options:
-            Finanční plánování: Finanční plánování
-            Investice: Investice
-        span: left
-        column: false
-        scope: false
+
+#    services:
+#        label: Zaměření
+#        type: checkboxlist
+#        options:
+#            Finanční plánování: Finanční plánování
+#            Investice: Investice
+#        span: left
+#        column: false
+#        scope: false
 
     email:
         label: E-mail

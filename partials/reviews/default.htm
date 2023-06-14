@@ -4,7 +4,7 @@
     <div class="swiper reviews-swiper">
         <div class="swiper-wrapper pb-5 pb-xl-0">
             {% for post in posts %}
-                <div class="swiper-slide p-4 h-auto border border-2 {% if loop.index is odd %}border-green{% else %}border-blue{% endif %}">
+                <div class="swiper-slide p-4 border border-2 {% if loop.index is odd %}border-green{% else %}border-blue{% endif %}">
                     <div class="row g-4">
                         {% set image = post.featured_images.first %}
 

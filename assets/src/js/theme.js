@@ -42,6 +42,9 @@ var reviewsSwiper = new Swiper(".reviews-swiper", {
         nextEl: ".swiper-button-next-reviews",
         prevEl: ".swiper-button-prev-reviews",
     },
+    autoplay: {
+        delay: 10000,
+    },
 });
 
 // lightGallery(document.getElementById("klienti"), {

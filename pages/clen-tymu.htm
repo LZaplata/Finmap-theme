@@ -81,6 +81,14 @@ handle = "Team\Comment"
                                             </a>
                                         </p>
                                     {% endif %}
+
+                                    {% if member.ico %}
+                                        <p class="mb-0 d-flex align-items-center">
+                                            <i class="bi bi-envelope text-blue me-3 invisible"></i>
+
+                                            IČO: {{ member.ico }}
+                                        </p>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

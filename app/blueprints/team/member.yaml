@@ -55,3 +55,8 @@ fields:
         label: Telefon
         span: right
         type: text
+
+    ico:
+        label: IČO
+        span: left
+        type: text

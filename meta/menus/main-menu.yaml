@@ -39,6 +39,19 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: 'Srovnávač'
+        nesting: null
+        type: url
+        url: 'https://lead.verzuz.com/'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
         title: Kontakt
         type: url
         url: '#kontakt'

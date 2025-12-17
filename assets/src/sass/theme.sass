@@ -326,12 +326,18 @@ header
                 transform: translateY(0) !important
 
             img
-                max-height: 100px
+                max-height: 125px
 
-                @include media-breakpoint-up(md)
+                @include media-breakpoint-up(sm)
                     max-height: 130px
 
                 @include media-breakpoint-up(md)
+                    max-height: 180px
+
+                @include media-breakpoint-up(lg)
+                    max-height: 183px
+
+                @include media-breakpoint-up(xl)
                     max-height: none
 
         .comments
